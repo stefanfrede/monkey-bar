@@ -5,6 +5,7 @@
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:lit/recommended",
+    "plugin:wc/recommended",
     "plugin:prettier/recommended"
   ],
   "parser": "babel-eslint",
@@ -18,12 +19,11 @@
   },
   "env": {
     "browser": true,
-    "node": true,
-    "jest": true
+    "node": true
   },
   "plugins": [
     "html",
-    "jest",
-    "lit"
+    "lit",
+    "wc"
   ]
 }

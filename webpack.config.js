@@ -1,7 +1,6 @@
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
-const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const merge = require('webpack-merge');
@@ -22,7 +21,10 @@ const commonConfig = merge([
     plugins: [
       new CaseSensitivePathsPlugin(),
       new FriendlyErrorsWebpackPlugin(),
-      new GenerateSW(),
+      new GenerateSW({
+        navigateFallback: '/index.html',
+        swDest: 'sw.js',
+      }),
       new HtmlWebpackPlugin({
         template: './src/index.html',
         title: 'Monkey-Bar',
@@ -32,13 +34,6 @@ const commonConfig = merge([
       mainFields: ['module', 'browser', 'main'],
     },
   },
-  parts.loadFonts(),
-  parts.loadSVGs({
-    options: {
-      classPrefix: true,
-      idPrefix: true,
-    },
-  }),
   parts.loadJavaScript({
     include: PATHS.app,
   }),
@@ -66,26 +61,6 @@ const productionConfig = merge([
   },
   parts.clean(),
   parts.minifyJavaScript(),
-  parts.minifyCSS({
-    options: {
-      discardComments: {
-        removeAll: true,
-      },
-      safe: true,
-    },
-  }),
-  parts.extractCSS({
-    use: ['css-loader', 'postcss-loader'],
-  }),
-  parts.purifyCSS({
-    paths: glob.sync(`${PATHS.app}/**/*.js`, { nodir: true }),
-  }),
-  parts.loadImages({
-    options: {
-      limit: 15000,
-      name: '[name].[hash:4].[ext]',
-    },
-  }),
   parts.generateSourceMaps({ type: 'source-map' }),
   {
     optimization: {
