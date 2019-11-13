@@ -291,7 +291,7 @@
             "byName": {},
             "bySource": {},
             "usedIds": [
-              0
+              1
             ]
           }
         }
@@ -386,7 +386,9 @@
           "node_modules/core-js-pure/internals/get-built-in.js": 62,
           "node_modules/core-js-pure/internals/entry-virtual.js": 63,
           "node_modules/mini-css-extract-plugin/dist/loader.js!node_modules/css-loader/dist/cjs.js!node_modules/postcss-loader/src/index.js!src/css/index.css": 64,
-          "node_modules/babel-loader/lib/index.js??ref--6!src/index.js 9961132f8caf6ec24e9c5c57fc8171a2": 65
+          "node_modules/babel-loader/lib/index.js??ref--6!src/index.js 9961132f8caf6ec24e9c5c57fc8171a2": 65,
+          "node_modules/lit-element/lit-element.js c5993bcd0a2cedbc6d0f436d01994609": 8,
+          "node_modules/babel-loader/lib/index.js??ref--4!src/index.js": 24
         },
         "usedIds": {
           "0": 0,
@@ -461,13 +463,15 @@
         "byName": {
           "index": 0,
           "manifest": 1,
-          "vendors~index": 2
+          "vendors~index": 2,
+          "monkey-bar": 3,
+          "vendors~monkey-bar": 4
         },
         "bySource": {},
         "usedIds": [
-          0,
           1,
-          2
+          3,
+          4
         ]
       }
     }

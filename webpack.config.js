@@ -58,10 +58,8 @@ const productionConfig = merge([
   {
     recordsPath: path.join(__dirname, 'records.json'),
     output: {
-      // chunkFilename: '[name].[chunkhash:4].js',
-      // filename: '[name].[chunkhash:4].js',
-      chunkFilename: '[name].js',
-      filename: '[name].js',
+      chunkFilename: '[name].[chunkhash:4].js',
+      filename: '[name].[chunkhash:4].js',
     },
   },
   parts.clean(),

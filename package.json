@@ -6,13 +6,8 @@
     "node": "10.x.x",
     "npm": "6.x.x"
   },
-  "main": "dist/monkey-bar.js",
-  "module": "dist/monkey-bar.js",
-  "files": [
-    "dist/*.*js",
-    "dist/*.*js.LICENSE",
-    "dist/*.*js.map"
-  ],
+  "main": "monkey-bar.js",
+  "module": "monkey-bar.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:stefanfrede/monkey-bar.git"

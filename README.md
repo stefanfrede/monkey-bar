@@ -32,7 +32,7 @@ Progress element built with [lit-element](https://lit-element.polymer-project.or
 1. Install the component from [npm](https://www.npmjs.com)
 
     ```sh
-    $ npm i monkey-bar@1.0.0-alpha.1
+    $ npm i monkey-bar@1.0.0-alpha.2
     ```
 
 2. Import the component
