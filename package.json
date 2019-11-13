@@ -1,6 +1,6 @@
 {
   "name": "monkey-bar",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha1",
   "description": "<monkey-bar> is a lit-element component displaying a progress-bar.",
   "engines": {
     "node": "10.x.x",
