@@ -172,13 +172,15 @@
       "manifest": 1,
       "vendors~main": 2,
       "index": 3,
-      "vendors~index": 4
+      "vendors~index": 4,
+      "monkey-bar": 3,
+      "vendors~monkey-bar": 4
     },
     "bySource": {},
     "usedIds": [
-      0,
       1,
-      2
+      3,
+      4
     ]
   },
   "mini-css-extract-plugin node_modules/css-loader/dist/cjs.js!node_modules/postcss-loader/src/index.js!src/styles/index.css": [

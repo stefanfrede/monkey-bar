@@ -42,21 +42,5 @@ module.exports = api => {
         },
       ],
     ],
-    env: {
-      cjs: {
-        presets: [
-          [
-            '@babel/env',
-            {
-              corejs: 3,
-              targets: {
-                node: 10,
-              },
-              useBuiltIns: 'usage',
-            },
-          ],
-        ],
-      },
-    },
   };
 };

@@ -14,6 +14,9 @@ const PATHS = {
 
 const commonConfig = merge([
   {
+    entry: {
+      'monkey-bar': './src/index.js',
+    },
     output: {
       path: path.resolve(process.cwd(), 'dist'),
     },
@@ -55,8 +58,10 @@ const productionConfig = merge([
   {
     recordsPath: path.join(__dirname, 'records.json'),
     output: {
-      chunkFilename: '[name].[chunkhash:4].js',
-      filename: '[name].[chunkhash:4].js',
+      // chunkFilename: '[name].[chunkhash:4].js',
+      // filename: '[name].[chunkhash:4].js',
+      chunkFilename: '[name].js',
+      filename: '[name].js',
     },
   },
   parts.clean(),
