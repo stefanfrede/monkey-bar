@@ -88,7 +88,7 @@ class MonkeyBar extends LitElement {
       min: { type: Number, reflect: true },
       max: { type: Number, reflect: true },
       now: { type: Number, reflect: true },
-      label: { type: Boolean },
+      labeled: { type: Boolean },
       striped: { type: Boolean },
       animated: { type: Boolean },
     };
@@ -101,7 +101,7 @@ class MonkeyBar extends LitElement {
     this.max = 100;
     this.now = 0;
 
-    this.label = false;
+    this.labeled = false;
     this.striped = false;
     this.animated = false;
   }
@@ -119,7 +119,7 @@ class MonkeyBar extends LitElement {
         aria-valuemax="${this.max}"
         aria-valuenow="${this.now}"
       >
-        ${this.label ? this.now + '%' : ''}
+        ${this.labeled ? `${this.now}%` : ''}
       </div>
     `;
   }

@@ -17,7 +17,7 @@ Progress element built with [lit-element](https://lit-element.polymer-project.or
   min="0"
   max="100"
   now="80"
-  label striped></monkey-bar>
+  labeled striped></monkey-bar>
 ```
 
 ![<monkey-bar> screenshot](https://raw.githubusercontent.com/stefanfrede/monkey-bar/master/screenshot.png)
@@ -32,7 +32,7 @@ Progress element built with [lit-element](https://lit-element.polymer-project.or
 1. Install the component from [npm](https://www.npmjs.com)
 
     ```sh
-    $ npm i monkey-bar@1.0.0-alpha.4
+    $ npm i monkey-bar@1.0.0-alpha.5
     ```
 
 2. Import the component
@@ -55,6 +55,12 @@ Progress element built with [lit-element](https://lit-element.polymer-project.or
 
     ```html
     <script type="module" src="./path-to/monkey-bar/monkey-bar.js"></script>
+    ```
+
+    You can also use [UNPKG](https://unpkg.com) (step 1 is then unnecessary):
+
+    ```html
+    <script src="https://unpkg.com/monkey-bar@1.0.0-alpha.5/dist/monkey-bar.min.js"></script>
     ```
 3. Add the component to your application or component:
 
