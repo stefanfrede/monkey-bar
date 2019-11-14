@@ -6,8 +6,16 @@
     "node": "10.x.x",
     "npm": "6.x.x"
   },
-  "main": "monkey-bar.js",
-  "module": "monkey-bar.js",
+  "main": "lib/",
+  "module": "esm/",
+  "unpkg": "dist/monkey-bar.es6.js",
+  "files": [
+    "cjs",
+    "dist/*.*.es6.js",
+    "dist/*.*.es6.js.LICENSE",
+    "dist/*.*.es6.js.map",
+    "esm"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:stefanfrede/monkey-bar.git"
@@ -52,7 +60,10 @@
   "sideEffects": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build": "webpack --env production",
+    "build": "npm run build:cjs &&npm run build:dist && npm run build:esm",
+    "build:cjs": "babel --delete-dir-on-start --env-name cjs -d lib/ src/",
+    "build:dist": "webpack --env production",
+    "build:esm": "babel --delete-dir-on-start -d esm/ src/",
     "build:stats": "webpack --env production --json > stats.json",
     "preversion": "npm test",
     "prepublishOnly": "npm run lint && npm run build",
@@ -84,6 +95,7 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "babel-eslint": "^10.0.3",
+    "babel-esm-plugin": "^0.6.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-bundled-import-meta": "^0.3.1",
     "babel-plugin-dynamic-import-node": "^2.3.0",
@@ -133,8 +145,7 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2",
-    "webpack-merge": "^4.2.2",
-    "workbox-webpack-plugin": "^4.3.1"
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.6.3",

@@ -1,6 +1,6 @@
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const BabelEsmPlugin = require('babel-esm-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const { GenerateSW } = require('workbox-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const merge = require('webpack-merge');
@@ -23,11 +23,8 @@ const commonConfig = merge([
     node: false,
     plugins: [
       new CaseSensitivePathsPlugin(),
+      new BabelEsmPlugin(),
       new FriendlyErrorsWebpackPlugin(),
-      new GenerateSW({
-        navigateFallback: '/index.html',
-        swDest: 'sw.js',
-      }),
       new HtmlWebpackPlugin({
         template: './src/index.html',
         title: 'Monkey-Bar',
@@ -56,25 +53,13 @@ const productionConfig = merge([
     },
   },
   {
-    recordsPath: path.join(__dirname, 'records.json'),
     output: {
-      chunkFilename: '[name].[chunkhash:4].js',
-      filename: '[name].[chunkhash:4].js',
+      filename: '[name].min.js',
     },
   },
   parts.clean(),
   parts.minifyJavaScript(),
   parts.generateSourceMaps({ type: 'source-map' }),
-  {
-    optimization: {
-      splitChunks: {
-        chunks: 'initial',
-      },
-      runtimeChunk: {
-        name: 'manifest',
-      },
-    },
-  },
   parts.attachRevision(),
 ]);
 
