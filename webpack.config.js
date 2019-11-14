@@ -1,5 +1,4 @@
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const BabelEsmPlugin = require('babel-esm-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -23,7 +22,6 @@ const commonConfig = merge([
     node: false,
     plugins: [
       new CaseSensitivePathsPlugin(),
-      new BabelEsmPlugin(),
       new FriendlyErrorsWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html',
