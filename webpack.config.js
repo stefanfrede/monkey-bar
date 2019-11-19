@@ -66,8 +66,6 @@ const developmentConfig = merge([
     host: process.env.HOST,
     port: process.env.PORT,
   }),
-  parts.loadCSS(),
-  parts.loadImages(),
 ]);
 
 module.exports = mode => {
