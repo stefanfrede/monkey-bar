@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.12](https://github.com/stefanfrede/monkey-bar/compare/v1.0.0-alpha.11...v1.0.0-alpha.12) (2020-01-03)
+
+
+### Bug Fixes
+
+* test only on node v12 ([57a0150](https://github.com/stefanfrede/monkey-bar/commit/57a015025d965f62eb1f6d0ddbcb6b2b04754315))
+
 ## [1.0.0-alpha.11](https://github.com/stefanfrede/monkey-bar/compare/v1.0.0-alpha.10...v1.0.0-alpha.11) (2020-01-03)
 
 ## [1.0.0-alpha.10](https://github.com/stefanfrede/monkey-bar/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2020-01-03)
