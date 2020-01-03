@@ -1,6 +1,6 @@
 {
   "name": "monkey-bar",
-  "version": "1.0.0-alpha.10",
+  "version": "1.0.0-alpha.11",
   "description": "Progress element built with lit-element based on Bootstrap 4",
   "engines": {
     "node": "10.x.x",
