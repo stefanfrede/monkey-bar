@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.8](https://github.com/stefanfrede/monkey-bar/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2020-01-03)
+
+
+### Bug Fixes
+
+* add missing version to deploy script ([68da279](https://github.com/stefanfrede/monkey-bar/commit/68da279344872678fb66b7b0585d9fbd31960560))
+
 ## [1.0.0-alpha.7](https://github.com/stefanfrede/monkey-bar/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2020-01-03)
 
 
