@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.9](https://github.com/stefanfrede/monkey-bar/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2020-01-03)
+
+
+### Bug Fixes
+
+* change from env to with ([09d496b](https://github.com/stefanfrede/monkey-bar/commit/09d496be80fb892f2cb3cebf88081f8384281592))
+
 ## [1.0.0-alpha.8](https://github.com/stefanfrede/monkey-bar/compare/v1.0.0-alpha.7...v1.0.0-alpha.8) (2020-01-03)
 
 
