@@ -1,21 +1,22 @@
-name: Node CI
+name: Publish
 
 on:
   pull_request:
     branches:
       - master
+  push:
+    branches:
+      - master
 
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [10.x, 12.x]
-
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v1
       with:
         fetch-depth: 1
     - name: Use Node.js ${{ matrix.node-version }}
@@ -30,3 +31,10 @@ jobs:
         npm run test
       env:
         CI: true
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: master
+        BRANCH: gh-pages
+        FOLDER: dist
