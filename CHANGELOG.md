@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.10](https://github.com/stefanfrede/monkey-bar/compare/v1.0.0-alpha.9...v1.0.0-alpha.10) (2020-01-03)
+
+
+### Bug Fixes
+
+* remove env vars ([0a04acb](https://github.com/stefanfrede/monkey-bar/commit/0a04acb1e44350206d291c23747399e604bfbebd))
+
 ## [1.0.0-alpha.9](https://github.com/stefanfrede/monkey-bar/compare/v1.0.0-alpha.8...v1.0.0-alpha.9) (2020-01-03)
 
 
